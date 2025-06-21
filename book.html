@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Event - EventPro</title>
+    
+    <!-- Mandatly CMP Script -->
+    <script>
+        window.mandatlyConfig = {
+            id: 'YOUR_MANDATLY_ID_HERE', // Replace with actual Mandatly ID
+            position: 'bottom-right',
+            theme: 'light'
+        };
+    </script>
+    <script src="https://cdn.mandatly.io/cmp.js" async></script>
+    
+    <!-- Facebook Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_FACEBOOK_PIXEL_ID_HERE'); // Replace with actual Pixel ID
+        fbq('track', 'PageView');
+    </script>
+    
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">EventPro</a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="book.html" class="nav-link active">Book Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Book Your Event</h1>
+                <p>Choose from our selection of premium events</p>
+            </div>
+        </section>
+
+        <section class="booking-section">
+            <div class="container">
+                <div class="booking-grid">
+                    <div class="events-list">
+                        <div class="event-item" data-event="tech-conference">
+                            <h3>Tech Conference 2025</h3>
+                            <p>March 15-17, 2025 • San Francisco</p>
+                            <span class="price">$299</span>
+                            <button class="select-event">Select</button>
+                        </div>
+                        <div class="event-item" data-event="marketing-workshop">
+                            <h3>Digital Marketing Workshop</h3>
+                            <p>April 8, 2025 • New York</p>
+                            <span class="price">$149</span>
+                            <button class="select-event">Select</button>
+                        </div>
+                        <div class="event-item" data-event="startup-networking">
+                            <h3>Startup Networking</h3>
+                            <p>May 20, 2025 • Austin</p>
+                            <span class="price">$79</span>
+                            <button class="select-event">Select</button>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-form">
+                        <h3>Booking Details</h3>
+                        <form id="bookingForm">
+                            <input type="hidden" id="selectedEvent" name="event">
+                            
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="tickets">Number of Tickets</label>
+                                <select id="tickets" name="tickets">
+                                    <option value="1">1 Ticket</option>
+                                    <option value="2">2 Tickets</option>
+                                    <option value="3">3 Tickets</option>
+                                    <option value="4">4 Tickets</option>
+                                    <option value="5">5+ Tickets</option>
+                                </select>
+                            </div>
+                            
+                            <div class="booking-summary">
+                                <h4>Booking Summary</h4>
+                                <p id="selectedEventName">Please select an event</p>
+                                <p id="totalPrice">Total: $0</p>
+                            </div>
+                            
+                            <button type="submit" class="book-button">Complete Booking</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 EventPro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/ga.js"></script>
+    <script src="scripts/chatbot.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

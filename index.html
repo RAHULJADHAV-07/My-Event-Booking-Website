@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventPro - Professional Event Booking</title>
+    <meta name="description" content="Book amazing events, conferences, and workshops with EventPro">
+    
+    <!-- Mandatly CMP Script -->
+    <script>
+        window.mandatlyConfig = {
+            id: 'YOUR_MANDATLY_ID_HERE', // Replace with actual Mandatly ID
+            position: 'bottom-right',
+            theme: 'light'
+        };
+    </script>
+    <script src="https://cdn.mandatly.io/cmp.js" async></script>
+    
+    <!-- Facebook Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_FACEBOOK_PIXEL_ID_HERE'); // Replace with actual Pixel ID
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=YOUR_FACEBOOK_PIXEL_ID_HERE&ev=PageView&noscript=1"/>
+    </noscript>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">EventPro</a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="book.html" class="nav-link">Book Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Your Perfect Event Awaits</h1>
+                <p>Discover and book amazing events, conferences, and workshops tailored to your interests.</p>
+                <a href="book.html" class="cta-button">Book Now</a>
+            </div>
+        </section>
+
+        <!-- Featured Events -->
+        <section class="featured-events">
+            <div class="container">
+                <h2>Featured Events</h2>
+                <div class="events-grid">
+                    <div class="event-card">
+                        <h3>Tech Conference 2025</h3>
+                        <p>Join industry leaders for the biggest tech event of the year.</p>
+                        <span class="event-price">$299</span>
+                    </div>
+                    <div class="event-card">
+                        <h3>Digital Marketing Workshop</h3>
+                        <p>Learn the latest strategies from marketing experts.</p>
+                        <span class="event-price">$149</span>
+                    </div>
+                    <div class="event-card">
+                        <h3>Startup Networking</h3>
+                        <p>Connect with entrepreneurs and investors.</p>
+                        <span class="event-price">$79</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- YouTube Video Section -->
+        <section class="video-section">
+            <div class="container">
+                <h2>Watch Our Event Highlights</h2>
+                <div class="video-wrapper">
+                    <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/yB8nxps7Iac?si=gMmXLdoC8DUbS66i" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen >
+                </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="container">
+                <h2>Stay Updated</h2>
+                <p>Get the latest event updates and exclusive offers.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 EventPro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/ga.js"></script>
+    <script src="scripts/chatbot.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
